@@ -6,15 +6,389 @@
     <script type="text/javascript" src="jquery-1.2.6.js"></script>
     <script type="text/javascript" src="t_s_script.js"></script>
   </head>
+  <body> 
+  
+<br>  
+<p>В сводной таблице собраны основные характеристики всех редакций Windows 7: Windows 7 Starter, Windows 7 Home Basic, Windows 7 Home Premium, Windows 7 Professional, Windows 7 Enterprise, Windows 7 Ultimate.</p>
+<br>
+<button  onclick="addStyle2()">Выделить заголовки таблицы зеленым</button><br><br>
+<button  onclick="addStyle3()">Выделить  столбец "Редакции" желтым</button><br><br>
+
+<br>
+<div class="form-group"> 
+   <input type="text" class="form-control pull-right" id="search_3" placeholder="Поиск по таблице"> 
+   </div>
+   
+  <table class="table table-striped" id="mytable_3" cellspacing="0" style="width: 100%;"> 
+
+    <thead>
+        <tr role="row">
+			<th id="s1" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Редакции</strong></span></th>
+			<th id="s2"class="wysiwyg-text-align-center" style="width: 108px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Начальная</strong></span></th>
+			<th id="s3"class="wysiwyg-text-align-center" style="width: 109px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Домашняя базовая</strong></span></th>
+			<th id="s4" class="wysiwyg-text-align-center" style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Домашняя расширенная</strong></span></th>
+			<th id="s5" class="wysiwyg-text-align-center" style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Профессиональная</strong></span></th>
+			<th id="s6" class="wysiwyg-text-align-center" style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Максимальная</strong></span></th>
+			<th id="s7" class="wysiwyg-text-align-center" style="width: 79.5px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows 7 Корпоративная</strong></span></th>
+        </tr>
+    </thead>
+
+<tbody>
+
+<tr>
+<td id="d1" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Способ распространения</strong></span></th>
+<td>OEM-лицензии</td>
+<td>Розница и OEM-лицензии</td>
+<td>Розница и OEM-лицензии</td>
+<td>Розница, OEM-лицензии, корпоративные лицензии</td>
+<td>Розница и OEM-лицензии</td>
+<td>Корпоративные лицензии</td>
+</tr>
+<tr>
+<td id="d2" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Максимальный объем физической памяти (32 бит)</strong></span></th>
+<td>2ГБ</td>
+<td>4ГБ</td>
+<td>4ГБ</td>
+<td>4ГБ</td>
+<td>4ГБ</td>
+<td>4ГБ</td>
+</tr>
+<tr>
+<td id="d3" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Максимальный объем физической памяти (64-бит)</strong></span></th>
+<td>Нет</td>
+<td>8ГБ</td>
+<td>16ГБ</td>
+<td>192ГБ</td>
+<td>192ГБ</td>
+<td>192ГБ</td>
+</tr>
+<tr>
+<td id="d4" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>64 - битная версия </strong></span></th>
+<td>Нет</td>
+<td>Да, только в OEM-версии</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d5" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Количество физических процессоров</strong></span></th>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td id="d6" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Центр восстановления Windows</strong></span></th>
+<td>Нет поддержки домена</td>
+<td>Нет поддержки домена</td>
+<td>Нет поддержки домена</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d7" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Домашняя группа</strong></span></th>
+<td>Только присоединение</td>
+<td>Только присоединение</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d8" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Удаленный рабочий стол</strong></span></th>
+<td>Только клиент</td>
+<td>Только клиент</td>
+<td>Только клиент</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d9" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Несколько мониторов</strong></span></th>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d10" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Быстрое переключение пользователей</strong></span></th>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d11" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows Aero</strong></span></th>
+<td>Нет</td>
+<td>Базовая тема оформления</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d12" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Смена фонового изображения рабочего стола</strong></span></th>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d13" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Диспетчер окон рабочего стола</strong></span></th>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d14" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Центр мобильности</strong></span></th>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d15" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Поддержка мультитач</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d16" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Онлайн игры</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да, отключено</td>
+<td>Да</td>
+<td>Да, отключено</td>
+</tr>
+<tr>
+<td id="d17" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows Media Center</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d18" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows DVD Maker</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d19" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Родительский контроль</strong></span></th>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d20" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows Defender</strong></span></th>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d21" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows Firewall</strong></span></th>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d22" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>EFS</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d23" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Печать</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d24" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Режим презентации</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d25" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Присоединение к домену Windows </strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d26" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Windows XP Mode</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d27" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Политики ограниченного использования программ</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d28" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>AppLocker</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d29" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>BitLocker</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d30" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>BitLocker To Go</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d31" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>BranchCache</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d32" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>DirectAccess</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d33" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Подсистема для UNIX-приложений</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d34" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Пакет мультиязычного пользовательского интерфейса</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d35" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Создание и подключение VHD</strong></span></th>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d36" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Загрузка с VHD</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+<tr>
+<td id="d37" class="wysiwyg-text-align-center" style="width: 139px; height: 22px;"><span class="wysiwyg-font-size-small"><strong>Запуск системных оснасток</strong></span></th>
+<td>Нет</td>
+<td>Нет</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Да</td>
+<td>Да</td>
+</tr>
+</tbody>
+</table> 
+  
+  
+  
+  
   
 <p>На этой странице представлена сводная таблица актуальных версий операционной системы KeeneticOS (NDMS v2) для интернет-центров серии Keenetic.<br /> Модели отсортированы по алфавиту.</p>
 <p>KeeneticOS — модульная операционная система интернет-центра с набором установленных компонентов. Иначе KeeneticOS называют системным встроенным программным обеспечением (ПО).<br /> Релиз — официальный стабильный выпуск операционной системы.<br /> Предварительная версия (Бета) — официальный выпуск операционной системы, прошедший внутреннее тестирование и находящийся на этапе окончательной отладки.</p>
 <p>TIP: <strong>Статусы:<br /></strong><br /> <strong>Active</strong> — ведется разработка новых версий;<br /> <strong>EoD</strong> — <em>End of Development</em>, новые возможности для этой модели не добавляются, обновление операционной системы возможно только для исправления критических ошибок;<br /> <strong>EoL</strong> — <em>End of Life</em>, прекращение разработки операционной системы для этой модели, последняя релизная версия.</p>
  
   
-  <body>
-   
+
+
+<button  onclick="addStyle1()">Выделить заголовки таблицы красным</button><br><br>
+
+		
+
  
+ 
+
 <div class="form-group"> 
    <input type="text" class="form-control pull-right" id="search" placeholder="Поиск по таблице"> 
    </div>
@@ -366,23 +740,17 @@
 </tbody>
 </table>
 
-
+<br>
+<br>
+<br>
 
  
- 
-  
-  
- 
-   <!-- <table style="width: 562.5px;" border="1" cellpadding="3"> -->
 
 
+<br>
+<br>
+<br>
 
-
-
-
-
-
-<!-- <table border="0" cellpadding="0"> -->
  <body>
  
 <p>ТОП -200 НЕПРАВИЛЬНЫХ ГЛАГОЛОВ<br /> 
@@ -1693,18 +2061,9 @@ hewed [hju:d]</td>
 <td style="text-align: left; vertical-align: top;">писать</td>
 </tr>
 </tbody>
+</table>
 <!-- Поиск -->
 </body>
-
-
-<button  onclick="addStyle1()">Выделить заголовки таблицы красным</button><br><br>
-<button  onclick="addStyle2()">Выделить шрифт в заголовках таблицы жирным</button><br><br>
-		
-  
-    
-
-
-  
 
 
 </html>
